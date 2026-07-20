@@ -94,34 +94,18 @@ export default function Gallery({ onOpenVideo, onOpenImageLightbox }) {
               }}
               className="gallery-item-card"
             >
-              {/* Background Thumbnail Image or Actual Video Frame */}
-              {item.type === 'video' ? (
-                <video
-                  src={`${item.videoUrl}#t=0.5`}
-                  preload="metadata"
-                  muted
-                  playsInline
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform 0.5s ease'
-                  }}
-                  className="gallery-img"
-                />
-              ) : (
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform 0.5s ease'
-                  }}
-                  className="gallery-img"
-                />
-              )}
+              {/* Background Thumbnail Image */}
+              <img
+                src={item.image}
+                alt={item.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  transition: 'transform 0.5s ease'
+                }}
+                className="gallery-img"
+              />
 
               {/* Hover Dark Gradient Overlay */}
               <div

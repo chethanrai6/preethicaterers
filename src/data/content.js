@@ -107,6 +107,7 @@ export const galleryItems = [
     id: 2,
     category: 'WEDDINGS',
     type: 'video',
+    image: '/assets/real_hall_dining.jpg',
     videoUrl: '/assets/video1.mp4',
     title: 'Floral Mandap Setup & Live Counters',
     subtitle: 'Wedding Decor Highlights'
@@ -123,6 +124,7 @@ export const galleryItems = [
     id: 4,
     category: 'RECEPTIONS',
     type: 'video',
+    image: '/assets/real_buffet_serving.jpg',
     videoUrl: '/assets/video2.mp4',
     title: 'Chefs Live Plating & Gourmet Service',
     subtitle: 'Master Chef Showcase'
@@ -139,6 +141,7 @@ export const galleryItems = [
     id: 6,
     category: 'DECORATIONS',
     type: 'video',
+    image: '/assets/real_dessert_fountain.jpg',
     videoUrl: '/assets/video3.mp4',
     title: 'Traditional South Indian Decor & Flowers',
     subtitle: 'Mangalore Grand Setup'
