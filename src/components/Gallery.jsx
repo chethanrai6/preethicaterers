@@ -63,7 +63,7 @@ export default function Gallery({ onOpenVideo, onOpenImageLightbox }) {
           })}
         </div>
 
-        {/* Media Grid (3 Columns) */}
+        {/* Media Grid (3 Columns with Staggered Side Entrances) */}
         <div
           style={{
             display: 'grid',
@@ -71,14 +71,14 @@ export default function Gallery({ onOpenVideo, onOpenImageLightbox }) {
             gap: '1.5rem',
             marginBottom: '3rem'
           }}
-          className="gallery-grid"
+          className="gallery-grid stagger-parent"
         >
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => {
                 if (item.type === 'video') {
-                  onOpenVideo(item.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+                  onOpenVideo(item.videoUrl || '/assets/video1.mp4');
                 } else {
                   onOpenImageLightbox(item.image, item.title);
                 }
@@ -92,7 +92,7 @@ export default function Gallery({ onOpenVideo, onOpenImageLightbox }) {
                 cursor: 'pointer',
                 border: '2px solid #FFFFFF'
               }}
-              className="gallery-item-card"
+              className="gallery-item-card stagger-child"
             >
               {/* Background Thumbnail Image */}
               <img

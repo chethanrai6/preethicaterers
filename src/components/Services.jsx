@@ -40,12 +40,12 @@ export default function Services({ onOpenEnquiry, onSelectService }) {
       <div className="container">
         {/* Section Header */}
         <div style={{ textAlign: 'center', maxWidth: '650px', margin: '0 auto 3.5rem auto' }}>
-          <span className="section-subtext">OUR SERVICES</span>
-          <h2 className="section-title">Catering & Event Solutions</h2>
+          <span className="section-subtext stagger-slide-right">OUR SERVICES</span>
+          <h2 className="section-title stagger-slide-left">Catering & Event Solutions</h2>
           <div className="gold-divider" />
         </div>
 
-        {/* 8 Cards Grid (4 columns x 2 rows on desktop) */}
+        {/* 8 Cards Grid (Staggered Side Entrances One-by-One) */}
         <div
           style={{
             display: 'grid',
@@ -53,7 +53,7 @@ export default function Services({ onOpenEnquiry, onSelectService }) {
             gap: '1.5rem',
             marginBottom: '3rem'
           }}
-          className="services-grid"
+          className="services-grid stagger-parent"
         >
           {servicesData.map((service) => {
             const IconComp = iconMap[service.icon] || Heart;
@@ -76,7 +76,7 @@ export default function Services({ onOpenEnquiry, onSelectService }) {
                   position: 'relative',
                   overflow: 'hidden'
                 }}
-                className="service-card"
+                className="service-card stagger-child"
               >
                 {/* Top Icon Badge */}
                 <div

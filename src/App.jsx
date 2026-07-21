@@ -34,7 +34,7 @@ export default function App() {
       { threshold: 0.15 }
     );
 
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger-slide-left, .stagger-slide-right, .stagger-child');
     revealElements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();

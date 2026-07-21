@@ -392,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(0.95);
 }
 
-/* Reveal on Scroll Classes */
+/* Reveal on Scroll Classes & Staggered One-by-One Side Entrances */
 .reveal {
   opacity: 0;
   transform: translateY(40px) scale(0.97);
@@ -415,6 +415,46 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translate(0, 0) scale(1);
 }
+
+/* Staggered Side Entrance Classes */
+.stagger-slide-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stagger-slide-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stagger-child {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.94);
+  transition: opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1), transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stagger-child-right {
+  opacity: 0;
+  transform: translateX(60px) scale(0.94);
+  transition: opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1), transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stagger-slide-left.active, .stagger-slide-right.active, .stagger-child.active, .stagger-child-right.active {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Automatic One-by-One Stagger Delays */
+.stagger-parent .stagger-child:nth-child(1) { transition-delay: 0.08s; }
+.stagger-parent .stagger-child:nth-child(2) { transition-delay: 0.22s; }
+.stagger-parent .stagger-child:nth-child(3) { transition-delay: 0.36s; }
+.stagger-parent .stagger-child:nth-child(4) { transition-delay: 0.50s; }
+.stagger-parent .stagger-child:nth-child(5) { transition-delay: 0.64s; }
+.stagger-parent .stagger-child:nth-child(6) { transition-delay: 0.78s; }
+.stagger-parent .stagger-child:nth-child(7) { transition-delay: 0.92s; }
+.stagger-parent .stagger-child:nth-child(8) { transition-delay: 1.06s; }
 
 /* Badge Header Subtext */
 .section-subtext {
