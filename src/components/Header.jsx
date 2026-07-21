@@ -120,7 +120,7 @@ export default function Header({ onOpenEnquiry, onNavigate }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
           <button
             onClick={onOpenEnquiry}
-            className="btn-primary"
+            className="btn-primary header-enquire-btn"
             style={{ padding: '0.75rem 1.4rem', fontSize: '0.85rem' }}
           >
             <Calendar size={16} />
@@ -223,17 +223,6 @@ export default function Header({ onOpenEnquiry, onNavigate }) {
 
             {/* Mobile Drawer Footer Actions */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginTop: '1.5rem' }}>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenEnquiry();
-                }}
-                className="btn-gold"
-                style={{ width: '100%', justifyContent: 'center' }}
-              >
-                <Calendar size={18} />
-                ENQUIRE NOW
-              </button>
               <a
                 href={`tel:${contactDetails.phone1.replace(/\s+/g, '')}`}
                 className="btn-primary"
@@ -255,6 +244,9 @@ export default function Header({ onOpenEnquiry, onNavigate }) {
           }
           .mobile-toggle-btn {
             display: block !important;
+          }
+          .header-enquire-btn {
+            display: none !important;
           }
         }
       `}</style>
