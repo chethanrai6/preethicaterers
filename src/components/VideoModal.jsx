@@ -68,6 +68,8 @@ export default function VideoModal({ videoUrl, onClose }) {
             controls
             autoPlay
             playsInline
+            webkit-playsinline="true"
+            preload="auto"
             style={{
               width: '100%',
               height: '100%',
